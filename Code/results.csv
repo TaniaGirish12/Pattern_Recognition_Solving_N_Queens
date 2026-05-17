@@ -1,0 +1,25 @@
+algorithm,label,n,time_sec,peak_memory_kb,solved,note
+DFS,Exhaustive DFS,10,0.00018008300685323775,3.2734375,True,
+DFS,Exhaustive DFS,30,5.000246541996603,8.65625,False,DNF within 5s
+DFS,Exhaustive DFS,50,10.000476624991279,9.3671875,False,DNF within 10s
+DFS,Exhaustive DFS,100,10.002165500001865,22.9296875,False,DNF within 10s
+DFS,Exhaustive DFS,200,10.01303495799948,33.46875,False,DNF within 10s
+DFS,Exhaustive DFS,500,10.244353750007576,133.875,False,DNF within 10s
+HillClimbing,Hill Climbing,10,0.0016991659940686077,3.7421875,True,
+HillClimbing,Hill Climbing,30,0.005526541004655883,4.6171875,True,
+HillClimbing,Hill Climbing,50,0.07806237498880364,6.5546875,True,
+HillClimbing,Hill Climbing,100,0.44620037500862963,10.546875,True,
+HillClimbing,Hill Climbing,200,1.0108450829866342,23.4453125,True,
+HillClimbing,Hill Climbing,500,90.00065191699832,222.5546875,False,DNF within 90s
+SimulatedAnnealing,Simulated Annealing,10,0.018401834007818252,3.296875,True,
+SimulatedAnnealing,Simulated Annealing,30,0.03585308400215581,4.171875,True,
+SimulatedAnnealing,Simulated Annealing,50,0.07494204200338572,5.1015625,True,
+SimulatedAnnealing,Simulated Annealing,100,0.43668341598822735,12.2578125,True,
+SimulatedAnnealing,Simulated Annealing,200,0.5275150829984341,12.1015625,True,
+SimulatedAnnealing,Simulated Annealing,500,120.0007177080115,68.796875,False,DNF within 120s
+Genetic,Genetic Algorithm,10,0.007580916993902065,22.609375,True,
+Genetic,Genetic Algorithm,30,0.45152170800429303,86.4921875,True,
+Genetic,Genetic Algorithm,50,1.6183805000036955,200.3828125,True,
+Genetic,Genetic Algorithm,100,80.00858549999248,716.2578125,False,DNF within 80s
+Genetic,Genetic Algorithm,200,120.03040274999512,1342.828125,False,DNF within 120s
+Genetic,Genetic Algorithm,500,180.08347008400597,6274.9375,False,DNF within 180s

@@ -1,0 +1,218 @@
+[
+  {
+    "algorithm": "DFS",
+    "label": "Exhaustive DFS",
+    "n": 10,
+    "time_sec": 0.00010116699991158384,
+    "peak_memory_kb": 8.140625,
+    "solved": true,
+    "note": ""
+  },
+  {
+    "algorithm": "DFS",
+    "label": "Exhaustive DFS",
+    "n": 30,
+    "time_sec": 5.000138461000006,
+    "peak_memory_kb": 22.7724609375,
+    "solved": false,
+    "note": "DNF within 5.0s"
+  },
+  {
+    "algorithm": "DFS",
+    "label": "Exhaustive DFS",
+    "n": 50,
+    "time_sec": 10.000459672000034,
+    "peak_memory_kb": 30.1552734375,
+    "solved": false,
+    "note": "DNF within 10.0s"
+  },
+  {
+    "algorithm": "DFS",
+    "label": "Exhaustive DFS",
+    "n": 100,
+    "time_sec": 10.002066172000013,
+    "peak_memory_kb": 57.7763671875,
+    "solved": false,
+    "note": "DNF within 10.0s"
+  },
+  {
+    "algorithm": "DFS",
+    "label": "Exhaustive DFS",
+    "n": 200,
+    "time_sec": 10.0126024220001,
+    "peak_memory_kb": 100.9716796875,
+    "solved": false,
+    "note": "DNF within 10.0s"
+  },
+  {
+    "algorithm": "DFS",
+    "label": "Exhaustive DFS",
+    "n": 500,
+    "time_sec": 5.251521586000081,
+    "peak_memory_kb": 287.7890625,
+    "solved": false,
+    "note": "DNF within 5.0s"
+  },
+  {
+    "algorithm": "HillClimbing",
+    "label": "Hill Climbing",
+    "n": 10,
+    "time_sec": 0.0010969580000619317,
+    "peak_memory_kb": 7.5625,
+    "solved": true,
+    "note": ""
+  },
+  {
+    "algorithm": "HillClimbing",
+    "label": "Hill Climbing",
+    "n": 30,
+    "time_sec": 0.006178832999921724,
+    "peak_memory_kb": 10.6640625,
+    "solved": true,
+    "note": ""
+  },
+  {
+    "algorithm": "HillClimbing",
+    "label": "Hill Climbing",
+    "n": 50,
+    "time_sec": 0.08355266600005962,
+    "peak_memory_kb": 13.5390625,
+    "solved": true,
+    "note": ""
+  },
+  {
+    "algorithm": "HillClimbing",
+    "label": "Hill Climbing",
+    "n": 100,
+    "time_sec": 0.5333389170000373,
+    "peak_memory_kb": 25.06640625,
+    "solved": true,
+    "note": ""
+  },
+  {
+    "algorithm": "HillClimbing",
+    "label": "Hill Climbing",
+    "n": 200,
+    "time_sec": 1.4821003760000622,
+    "peak_memory_kb": 49.6171875,
+    "solved": true,
+    "note": ""
+  },
+  {
+    "algorithm": "HillClimbing",
+    "label": "Hill Climbing",
+    "n": 500,
+    "time_sec": 30.00041709700008,
+    "peak_memory_kb": 222.9921875,
+    "solved": false,
+    "note": "DNF within 30.0s"
+  },
+  {
+    "algorithm": "SimulatedAnnealing",
+    "label": "Simulated Annealing",
+    "n": 10,
+    "time_sec": 0.010751750000054017,
+    "peak_memory_kb": 6.8779296875,
+    "solved": true,
+    "note": ""
+  },
+  {
+    "algorithm": "SimulatedAnnealing",
+    "label": "Simulated Annealing",
+    "n": 30,
+    "time_sec": 0.029108666999945854,
+    "peak_memory_kb": 7.8115234375,
+    "solved": true,
+    "note": ""
+  },
+  {
+    "algorithm": "SimulatedAnnealing",
+    "label": "Simulated Annealing",
+    "n": 50,
+    "time_sec": 0.05987087500011512,
+    "peak_memory_kb": 8.7490234375,
+    "solved": true,
+    "note": ""
+  },
+  {
+    "algorithm": "SimulatedAnnealing",
+    "label": "Simulated Annealing",
+    "n": 200,
+    "time_sec": 0.46450200100002803,
+    "peak_memory_kb": 15.7919921875,
+    "solved": true,
+    "note": ""
+  },
+  {
+    "algorithm": "SimulatedAnnealing",
+    "label": "Simulated Annealing",
+    "n": 500,
+    "time_sec": 40.00057051900012,
+    "peak_memory_kb": 67.6708984375,
+    "solved": false,
+    "note": "DNF within 40.0s"
+  },
+  {
+    "algorithm": "Genetic",
+    "label": "Genetic Algorithm",
+    "n": 10,
+    "time_sec": 0.0033593339999242744,
+    "peak_memory_kb": 29.9306640625,
+    "solved": true,
+    "note": ""
+  },
+  {
+    "algorithm": "Genetic",
+    "label": "Genetic Algorithm",
+    "n": 30,
+    "time_sec": 0.20478241699993305,
+    "peak_memory_kb": 92.7880859375,
+    "solved": true,
+    "note": ""
+  },
+  {
+    "algorithm": "Genetic",
+    "label": "Genetic Algorithm",
+    "n": 50,
+    "time_sec": 0.8347681249999823,
+    "peak_memory_kb": 206.3505859375,
+    "solved": true,
+    "note": ""
+  },
+  {
+    "algorithm": "Genetic",
+    "label": "Genetic Algorithm",
+    "n": 100,
+    "time_sec": 40.008323476999976,
+    "peak_memory_kb": 720.9736328125,
+    "solved": false,
+    "note": "DNF within 40.0s"
+  },
+  {
+    "algorithm": "Genetic",
+    "label": "Genetic Algorithm",
+    "n": 200,
+    "time_sec": 30.005961097999943,
+    "peak_memory_kb": 1347.4677734375,
+    "solved": false,
+    "note": "DNF within 30.0s"
+  },
+  {
+    "algorithm": "Genetic",
+    "label": "Genetic Algorithm",
+    "n": 500,
+    "time_sec": 30.09257030599997,
+    "peak_memory_kb": 5907.3046875,
+    "solved": false,
+    "note": "DNF within 30.0s"
+  },
+  {
+    "algorithm": "SimulatedAnnealing",
+    "label": "Simulated Annealing",
+    "n": 100,
+    "time_sec": 0.4311511249979958,
+    "peak_memory_kb": 12.3359375,
+    "solved": true,
+    "note": ""
+  }
+]
