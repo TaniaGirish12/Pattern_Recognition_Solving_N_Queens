@@ -1,26 +1,9 @@
-"""
-N-Queens via exhaustive depth-first search (backtracking).
-
-This is the classical recursive backtracking approach. We place one queen per
-row, and prune any partial placement that already has a column or diagonal
-conflict. The first complete board we find is returned.
-
-Note: this is guaranteed to find a solution if one exists, but the search
-space is huge for large N, so it is only practical up to maybe N ~ 30. For
-larger N the benchmark runner will impose a wall-clock timeout.
-"""
-
 import sys
 import time
 import tracemalloc
 
 
 def solve_dfs(n, time_limit=None):
-    """Return one valid N-Queens placement as a list of column indices.
-
-    queens[r] = c means there is a queen at row r, column c.
-    If `time_limit` (seconds) is given and exceeded, returns None.
-    """
     cols = set()      # columns already used
     diag1 = set()     # r - c for the / diagonal
     diag2 = set()     # r + c for the \ diagonal
@@ -58,7 +41,6 @@ def solve_dfs(n, time_limit=None):
 
 
 def is_valid_solution(queens):
-    """Check that no two queens attack each other."""
     n = len(queens)
     if len(set(queens)) != n:
         return False
@@ -70,7 +52,6 @@ def is_valid_solution(queens):
 
 
 def run(n, time_limit=None):
-    """Run DFS for the given N and return a result dict for the benchmark."""
     tracemalloc.start()
     t0 = time.perf_counter()
     solution = solve_dfs(n, time_limit=time_limit)

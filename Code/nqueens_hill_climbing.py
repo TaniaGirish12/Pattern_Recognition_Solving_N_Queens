@@ -1,32 +1,3 @@
-"""
-N-Queens via Hill Climbing (a greedy local search) with random restarts.
-
-State representation:
-    `state` is a list of length N where state[c] = r means a queen sits at
-    column c, row r. One queen per column is enforced by construction.
-
-Objective:
-    h(state) = number of attacking queen pairs (row and diagonal). A
-    solution has h = 0.
-
-Greedy step:
-    For each column we look at moving its queen to the row in that column
-    that minimises the total number of attacks. Out of all (column, new_row)
-    options we pick the single move that yields the lowest h. If no move
-    improves h we have hit a local optimum.
-
-Random restarts:
-    If we get stuck at a local optimum with h > 0, we throw away the state
-    and start again from a fresh random configuration. We keep restarting
-    until a solution is found or the time budget runs out.
-
-Efficiency:
-    We maintain row / diagonal occupancy counters and update the attack
-    count incrementally, so each candidate move is O(1) and a full
-    neighbourhood scan is O(N^2). This keeps the algorithm tractable up to
-    N ~ a few hundred within the timeout.
-"""
-
 import random
 import time
 import tracemalloc
@@ -59,7 +30,6 @@ def _attacks_from_counters(rows, d1, d2):
 
 
 def _delta_for_move(state, rows, d1, d2, c, new_r):
-    """Change in number of attacking pairs if we move column c's queen to new_r."""
     n = len(state)
     old_r = state[c]
     if old_r == new_r:
@@ -92,12 +62,6 @@ def _apply_move(state, rows, d1, d2, c, new_r):
 
 
 def hill_climb_once(n, rng, max_sideways=0, max_steps=None, deadline=None):
-    """Run one hill-climbing trajectory from a random start to a local
-    optimum. Returns (state, attacks, steps).
-
-    `deadline` (perf_counter() value) bails out of the inner loop early
-    when exceeded; lets the caller honour a wall-clock budget for large N.
-    """
     state = [rng.randrange(n) for _ in range(n)]
     rows, d1, d2 = _build_counters(state)
     h = _attacks_from_counters(rows, d1, d2)
@@ -134,9 +98,6 @@ def hill_climb_once(n, rng, max_sideways=0, max_steps=None, deadline=None):
 
 
 def solve_hill_climbing(n, time_limit=None, seed=None, max_sideways=0):
-    """Hill climbing with random restarts. Stops when h == 0 or the time
-    limit elapses. Returns (state_or_None, restarts, total_steps).
-    """
     rng = random.Random(seed)
     start = time.perf_counter()
     deadline = (start + time_limit) if time_limit is not None else None

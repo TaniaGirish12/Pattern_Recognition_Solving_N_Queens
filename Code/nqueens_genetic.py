@@ -1,26 +1,3 @@
-"""
-N-Queens via a Genetic Algorithm.
-
-Encoding:
-    Each individual is a permutation of {0, 1, ..., N-1}. The position in
-    the list is the column, the value is the row. A permutation guarantees
-    no two queens share a column AND no two queens share a row, so the only
-    conflicts left are diagonal ones. This is a very common trick for the
-    N-Queens problem and makes the GA much more focused than a naive
-    encoding.
-
-Fitness:
-    f(ind) = (max_possible_pairs) - diagonal_attacks(ind)
-    where max_possible_pairs = N*(N-1)/2. Higher fitness is better, and a
-    solution has fitness == max_possible_pairs (zero diagonal attacks).
-
-Operators:
-    - Tournament selection (size k).
-    - Order Crossover (OX1) which preserves the permutation property.
-    - Swap mutation: swap two random positions.
-    - Elitism: copy the best individual into the next generation unchanged.
-"""
-
 import random
 import time
 import tracemalloc
@@ -64,9 +41,6 @@ def _tournament(population, fitnesses, rng, k=3):
 
 
 def _order_crossover(p1, p2, rng):
-    """OX1 crossover: keep a random slice of p1, fill the rest from p2 in
-    p2's order. Produces a valid permutation child.
-    """
     n = len(p1)
     a, b = sorted(rng.sample(range(n), 2))
     child = [-1] * n
@@ -99,9 +73,6 @@ def solve_ga(
     time_limit=None,
     seed=None,
 ):
-    """Run a genetic algorithm until a perfect solution is found, the
-    generation budget is exhausted, or the time limit is hit.
-    """
     rng = random.Random(seed)
     if pop_size is None:
         pop_size = min(400, max(50, n * 4))

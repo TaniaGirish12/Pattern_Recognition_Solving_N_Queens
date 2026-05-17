@@ -1,24 +1,3 @@
-"""
-N-Queens via Simulated Annealing.
-
-State and objective are the same as in the hill-climbing file: one queen
-per column, h(state) is the number of attacking pairs.
-
-The annealing twist:
-    At each step we pick a random "single queen move" neighbour. If that
-    move reduces h we always accept it. If it makes things worse we accept
-    it anyway with probability exp(-delta / T), where T is the current
-    temperature. T starts high (so the search wanders freely and escapes
-    local optima) and is cooled geometrically toward zero, at which point
-    the algorithm behaves like greedy hill climbing.
-
-Cooling schedule:
-    T_k = T0 * alpha^k     with alpha in (0, 1), typically ~0.995.
-
-We restart from a new random state if the temperature gets very cold
-without finding a solution -- effectively a reheat.
-"""
-
 import math
 import random
 import time
@@ -41,7 +20,6 @@ def solve_simulated_annealing(
     min_T=1e-3,
     steps_per_temp=None,
 ):
-    """Run simulated annealing with reheat restarts."""
     rng = random.Random(seed)
     start = time.perf_counter()
     if T0 is None:

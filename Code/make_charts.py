@@ -1,9 +1,3 @@
-"""Render charts and tables from results.json.
-
-This is a separate step so it can be re-run quickly without re-doing the
-benchmarks. Outputs: charts.pdf, results.csv, results_table.txt.
-"""
-
 import csv
 import json
 import os
